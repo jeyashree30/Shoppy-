@@ -8,7 +8,7 @@ const OrderHistory = () => {
 
   useEffect(() => {
     axios
-      .get("http://shoppy-3.onrender.com/api/orders/my-orders", { withCredentials: true })
+      .get("https://shoppy-3.onrender.com/api/orders/my-orders", { withCredentials: true })
       .then((res) => setOrders(res.data.orders))
       .catch((err) => console.error("❌ Order fetch error:", err));
   }, []);

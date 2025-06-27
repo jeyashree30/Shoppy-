@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await axios.get("http://shoppy-3.onrender.com/api/auth/logout", {
+      await axios.get("https://shoppy-3.onrender.com/api/auth/logout", {
         withCredentials: true,
       });
     } catch (err) {
@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://shoppy-3.onrender.com/api/auth/me", {
+        const res = await axios.get("https://shoppy-3.onrender.com/api/auth/me", {
           withCredentials: true,
         });
         setUser(res.data.user);

@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://shoppy-3.onrender.com/api/products");
+        const res = await axios.get("https://shoppy-3.onrender.com/api/products");
         const data = res.data;
 
         // Optional: filter by search query

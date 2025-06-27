@@ -17,7 +17,7 @@ const CartPage = () => {
     if (newQty < 1) return;
     axios
       .put(
-        "http://shoppy-3.onrender.com/api/cart/update",
+        "https://shoppy-3.onrender.com/api/cart/update",
         { productId, quantity: newQty },
         { withCredentials: true }
       )
@@ -27,7 +27,7 @@ const CartPage = () => {
 
   const removeItem = (productId) => {
     axios
-      .delete(`http://shoppy-3.onrender.com/api/cart/remove/${productId}`, {
+      .delete(`https://shoppy-3.onrender.com/api/cart/remove/${productId}`, {
         withCredentials: true,
       })
       .then(() => fetchCart());
@@ -37,7 +37,7 @@ const CartPage = () => {
     setLoading(true); // ✅ Start loading
 
     axios
-      .post("http://shoppy-3.onrender.com/api/cart/place-order", {}, { withCredentials: true })
+      .post("https://shoppy-3.onrender.com/api/cart/place-order", {}, { withCredentials: true })
       .then(() => {
         setCartItems([]);
         alert("✅ Order placed successfully!");
@@ -70,7 +70,7 @@ const CartPage = () => {
               {cartItems.map(({ productId, quantity }) => (
                 <div key={productId._id} className="cart-item">
                   <img
-                    src={`http://shoppy-3.onrender.com/${productId.image.replace(/^\/?/, "")}`}
+                    src={`https://shoppy-3.onrender.com/${productId.image.replace(/^\/?/, "")}`}
                     alt={productId.name}
                   />
                   <div>

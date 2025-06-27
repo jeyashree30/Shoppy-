@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="product-card">
       <img
-        src={`http://shoppy-3.onrender.com/${product.image.replace(/^\/?/, "")}`}
+        src={`https://shoppy-3.onrender.com/${product.image.replace(/^\/?/, "")}`}
         alt={product.name}
         onClick={handleImageClick}
         style={{ cursor: "zoom-in" }}
