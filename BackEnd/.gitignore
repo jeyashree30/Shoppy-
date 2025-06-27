@@ -10,5 +10,5 @@ logs
 npm-debug.log*
 
 # Ignore uploads folder (optional if private)
-uploads/
+
 cd backen
