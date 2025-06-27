@@ -8,7 +8,7 @@ const OrderHistory = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/orders/my-orders", { withCredentials: true })
+      .get("http://shoppy-3.onrender.com/api/orders/my-orders", { withCredentials: true })
       .then((res) => setOrders(res.data.orders))
       .catch((err) => console.error("❌ Order fetch error:", err));
   }, []);
@@ -26,7 +26,7 @@ const OrderHistory = () => {
             <div className="order-items">
               {order.products.map(({ productId, quantity }) => (
                 <div key={productId._id} className="order-item">
-                  <img src={`http://localhost:5000/${productId.image.replace(/^\/?/, "")}`} alt={productId.name} />
+                  <img src={`http://shoppy-3.onrender.com/${productId.image.replace(/^\/?/, "")}`} alt={productId.name} />
                   <div>
                     <h4>{productId.name}</h4>
                     <p>Qty: {quantity}</p>

@@ -12,7 +12,7 @@ const SearchResults = () => {
   useEffect(() => {
     if (query) {
       axios
-        .get(`http://localhost:5000/api/products/search?q=${query}`)
+        .get(`http://shoppy-3.onrender.com/api/products/search?q=${query}`)
         .then((res) => setProducts(res.data))
         .catch((err) => console.error("Search error:", err));
     }

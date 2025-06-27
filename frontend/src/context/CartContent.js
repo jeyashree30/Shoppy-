@@ -13,7 +13,7 @@ export const CartProvider = ({ children }) => {
   const fetchCart = async () => {
     if (!user) return; // ⛔ no user, don't fetch
     try {
-      const res = await axios.get("http://localhost:5000/api/cart", {
+      const res = await axios.get("http://shoppy-3.onrender.com/api/cart", {
         withCredentials: true,
       });
       setCartItems([...(res.data.items || [])]);
@@ -25,7 +25,7 @@ export const CartProvider = ({ children }) => {
  const addToCart = async (productId, quantity = 1) => {
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/cart/add",
+      "http://shoppy-3.onrender.com/api/cart/add",
       { productId, quantity },
       { withCredentials: true }
     );
@@ -41,7 +41,7 @@ export const CartProvider = ({ children }) => {
   const increaseQuantity = async (productId) => {
     try {
       await axios.post(
-        "http://localhost:5000/api/cart/add",
+        "http://shoppy-3.onrender.comapi/cart/add",
         { productId, quantity: 1 },
         { withCredentials: true }
       );
@@ -54,7 +54,7 @@ export const CartProvider = ({ children }) => {
   const decreaseQuantity = async (productId) => {
     try {
       await axios.post(
-        "http://localhost:5000/api/cart/decrease",
+        "http://shoppy-3.onrender.com/api/cart/decrease",
         { productId },
         { withCredentials: true }
       );
@@ -67,7 +67,7 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = async (productId) => {
     try {
       await axios.post(
-        "http://localhost:5000/api/cart/remove",
+        "http://shoppy-3.onrender.com/api/cart/remove",
         { productId },
         { withCredentials: true }
       );
@@ -79,7 +79,7 @@ export const CartProvider = ({ children }) => {
 
   const clearCart = async () => {
     try {
-      await axios.post("http://localhost:5000/api/cart/clear", {}, {
+      await axios.post("http://shoppy-3.onrender.com/api/cart/clear", {}, {
         withCredentials: true,
       });
       setCartItems([]);

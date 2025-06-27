@@ -31,14 +31,14 @@ const ProductCard = ({ product }) => {
 
   // 🧠 On image click, open zoom in new tab
   const handleImageClick = () => {
-    const fullImageUrl = `http://localhost:5000/${product.image.replace(/^\/?/, "")}`;
+    const fullImageUrl = `http://shoppy-3.onrender.com/${product.image.replace(/^\/?/, "")}`;
     window.open(fullImageUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
     <div className="product-card">
       <img
-        src={`http://localhost:5000/${product.image.replace(/^\/?/, "")}`}
+        src={`http://shoppy-3.onrender.com/${product.image.replace(/^\/?/, "")}`}
         alt={product.name}
         onClick={handleImageClick}
         style={{ cursor: "zoom-in" }}

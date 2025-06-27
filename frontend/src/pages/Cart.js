@@ -28,7 +28,7 @@ const Cart = () => {
         <div className="cart-items">
           {cartItems.map((item) => (
             <div key={item._id} className="cart-item">
-              <img src={`http://localhost:5000/${productId.image.replace(/^\/?/, "")}`} alt={productId.name} />
+              <img src={`http://shoppy-3.onrender.com/${productId.image.replace(/^\/?/, "")}`} alt={productId.name} />
 
               <div className="cart-details">
                 <h4>{item.name}</h4>

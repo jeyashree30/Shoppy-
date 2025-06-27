@@ -24,7 +24,7 @@ const SignUp = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/signup", formData);
+      const res = await axios.post("http://shoppy-3.onrender.com/api/auth/signup", formData);
       console.log("Signup success:", res.data);
 
       toast.success("User registered successfully ✅"); // ✅ Toast on signup
