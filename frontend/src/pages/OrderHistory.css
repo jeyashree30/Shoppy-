@@ -1,0 +1,25 @@
+.order-history {
+  padding: 2rem;
+}
+.order-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+.order-items {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.order-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.order-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}

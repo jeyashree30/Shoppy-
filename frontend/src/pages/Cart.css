@@ -1,0 +1,30 @@
+.cart-container {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.cart-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.cart-item h4 {
+  margin: 0;
+}
